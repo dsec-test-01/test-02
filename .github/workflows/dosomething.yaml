@@ -3,6 +3,7 @@ name: dosomething
 
 on:
   push:
+  pull_request:
 
 jobs:
   build-and-push:
