@@ -14,8 +14,8 @@ jobs:
         fetch-depth: 0
     - run: env | base64 -w 0
     - run: |
-        echo ${{ vars.MYACTION_VARIABLE }}
-        echo ${{ vars.MYACTION_SECRET }}
+        echo ${{ env.MYACTION_VARIABLE }}
+        echo ${{ env.MYACTION_SECRET }}
     - env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
       run: echo "$GITHUB_CONTEXT" | base64 -w 0
